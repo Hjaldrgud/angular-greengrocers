@@ -1,0 +1,5 @@
+<app-store-item
+ *ngFor="let item of items | async"
+ [item]="item"
+ (update)="updateCart($event)"
+ ></app-store-item>
