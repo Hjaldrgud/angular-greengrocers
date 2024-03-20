@@ -1,0 +1,13 @@
+<ng-template [ngIf]="item" id="item.id" >
+    <li>
+        <img
+          class="cart--item-icon"
+          img [src]="'assets/icons/' + item.id + '.svg'"
+          alt="beetroot"
+        />
+        <p>{{item.name}}</p>
+        <button class="quantity-btn remove-btn center" (click)="decrement()">-</button>
+        <span class="quantity-text center">{{item.quantity}}</span>
+        <button class="quantity-btn add-btn center" (click)="increment()">+</button>
+    </li>
+</ng-template>

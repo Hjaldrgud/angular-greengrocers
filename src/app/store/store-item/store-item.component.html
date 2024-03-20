@@ -1,3 +1,9 @@
 <ng-template [ngIf]="item" id="item.id">
-    <span><div style="display: inline-block; width:200px;"><p>{{item.name}}</p><p>£{{item.price}}</p><button (click)="UpdateCart()">Add to cart</button></div></span>
+    <li>
+        <div class="store--item-icon">
+            <img [src]="'assets/icons/' + item.id + '.svg'" [alt]="item.name" />
+        </div>
+        <p>{{item.name}} - {{item.price}}</p>
+        <button (click)="UpdateCart()">Add to cart</button>
+      </li>
 </ng-template>
