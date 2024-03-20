@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-cart-total',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart-total.component.css']
 })
 export class CartTotalComponent {
-
+  @Input('total') total:number = 0;
 }

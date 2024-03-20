@@ -13,8 +13,6 @@ export class AppComponent {
 
   cart:CartItem[]= [];
   cartItem:CartItem | null = null
-
-
   total:number = 0;
 
   updateCart(cart:CartItem[]){
@@ -41,6 +39,7 @@ export class AppComponent {
     for(let i = 0; i<this.cart.length; i++){
       this.total += this.cart[i].price *this.cart[i].quantity;
     }
+    this.total = parseFloat(this.total.toFixed(2));
   }
 
 }

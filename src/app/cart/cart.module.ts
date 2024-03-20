@@ -18,7 +18,7 @@ import { CartTotalComponent } from './cart-total/cart-total.component';
   exports:[
     CartItemComponent, 
     CartListComponent, 
-    CartItemComponent
+    CartTotalComponent
   ],
 })
 
