@@ -1,8 +1,12 @@
+<div>
+  <button (click)="filterItemsByType('fruit')">Filter Fruit</button>
+  <button (click)="filterItemsByType('vegetable')">Filter Vegetable</button>
+</div>
+
 <ul class="item-list store--item-list">
     <app-store-item
-      *ngFor="let item of items | async"
+      *ngFor="let item of filteredItems | async"
       [item]="item"
       (update)="updateCart($event)"
     ></app-store-item>
 </ul>
-  
