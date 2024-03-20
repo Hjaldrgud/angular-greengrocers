@@ -1,11 +1,18 @@
-<div>
-  <button (click)="filterItemsByType('fruit')">Filter Fruit</button>
-  <button (click)="filterItemsByType('vegetable')">Filter Vegetable</button>
+<div class="button-container">
+  <button (click)="filterItemsByType('fruit')">Only Fruits</button>
+  <button (click)="filterItemsByType('vegetable')">Only Vegetables</button>
+</div>
+<div class="button-container">
+  <button (click)="sortItemsByPrice()">Sort by Price</button>
+  <button (click)="sortItemsByName()">Sort by Name</button>
+</div>
+<div class="button-container">
+  <button (click)="resetFilter()">Reset filters and sorting</button>
 </div>
 
 <ul class="item-list store--item-list">
     <app-store-item
-      *ngFor="let item of filteredItems | async"
+      *ngFor="let item of filteredItems"
       [item]="item"
       (update)="updateCart($event)"
     ></app-store-item>

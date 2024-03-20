@@ -20,7 +20,7 @@ export class AppComponent {
     this.calculateTotal();
   }
 
-  addToCart(item:StoreItem){
+  addToCart(item: StoreItem) {
     let cartIndex = this.cart.findIndex(c=>c.id == item.id)
  
     if(cartIndex>=0){
